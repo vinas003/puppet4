@@ -1,0 +1,52 @@
+# ActiveMQ connector settings:
+connector = activemq
+direct_addressing = 1
+plugin.activemq.pool.size = 1
+plugin.activemq.pool.1.host = <%= scope.lookupvar('mcollective::mcollective_host') %>
+plugin.activemq.pool.1.port = 61616
+plugin.activemq.pool.1.user = mcollective
+plugin.activemq.pool.1.password = <%= scope.lookupvar('mcollective::mcollective_password') %>
+plugin.activemq.pool.1.ssl = 1
+plugin.activemq.pool.1.ssl.ca = /var/lib/puppet/ssl/certs/ca.pem
+plugin.activemq.pool.1.ssl.cert = /etc/mcollective.d/credentials/certs/vina.mco.pem
+plugin.activemq.pool.1.ssl.key = /etc/mcollective.d/credentials/private_keys/vina.mco_key.pem
+plugin.activemq.pool.1.ssl.fallback = 0
+
+# SSL security plugin settings:
+securityprovider = ssl
+plugin.ssl_server_public = /etc/mcollective.d/credentials/certs/mcollective-servers.pem
+plugin.ssl_client_private = /etc/mcollective.d/credentials/private_keys/vina.mco_key.pem
+plugin.ssl_client_public = /etc/mcollective.d/credentials/certs/vina.mco.pem
+
+# Interface settings:
+default_discovery_method = mc
+direct_addressing_threshold = 10
+ttl = 60
+color = 1
+rpclimitmethod = first
+
+# No additional subcollectives:
+collectives = mcollective
+main_collective = mcollective
+
+# Platform defaults:
+# These settings differ based on platform; the default config file created
+# by the package should include correct values or omit the setting if the
+# default value is fine.
+libdir = /usr/libexec/mcollective
+#helptemplatedir = /etc/mcollective
+
+# Logging:
+#logger_type = console
+#loglevel = info
+
+logger_type = file
+loglevel = info
+logfile = /var/log/mcollective.log
+keeplogs = 5
+max_log_size = 2097152
+logfacility = user
+libdir = /usr/libexec/mcollective
+#rpchelptemplate = /etc/mcollective/rpc-help.erb
+#helptemplatedir = /etc/mcollective
+ssl_cipher = aes-256-cbc

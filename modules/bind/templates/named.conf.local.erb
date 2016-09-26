@@ -1,0 +1,10 @@
+zone "vinasec.se" {
+    type master;
+    file "/etc/named/zones/db.vinasec.se"; # zone file path
+};
+
+
+zone "10.in-addr.arpa" {
+    type master;
+    file "/etc/named/zones/db.10";  # 10.10.0.0/16 subnet
+};

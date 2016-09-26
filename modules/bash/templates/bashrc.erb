@@ -1,0 +1,41 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+   . /etc/bashrc
+fi
+
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ls='ls -ahl --color=auto'
+alias ll='ls -ahl --color=auto'
+alias df='df -h'
+alias emacs='emacs -nw'
+alias du='du -h'
+alias grep='grep --color=auto'
+alias find-in-dir='find-in-dir -h'
+
+export EDITOR='/usr/bin/emacs -nw'
+
+HISTSIZE=100000000
+HISTFILESIZE=1000000000
+HISTCONTROL=ignoredups
+
+bind 'set completion-ignore-case on'
+
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+
+export PS1="\[\033[36;5;11m\]\u\[$(tput sgr0)\] \[\033[33;5;11m\]@\[$(tput sgr0)\] \[\033[31;5;15m\]\h \[$(tput sgr0)\]\[\033[36;5;12m\]\w\[$(tput sgr0)\] \[\033[31;5;12m\]> \[$(tput sgr0)\]"
+
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+export JAVA_HOME=/usr
+
+TMOUT=600

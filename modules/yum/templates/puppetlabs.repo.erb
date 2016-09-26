@@ -1,0 +1,17 @@
+[puppetlabs]
+name=Puppet Labs PC1 Repository el 7 - $basearch
+baseurl=http://yum.puppetlabs.com/el/7/dependencies/$basearch
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs-PC1
+       file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppet-PC1
+enabled=1
+gpgcheck=1
+priority=101
+
+[puppetlabs-source]
+name=Puppet Labs PC1 Repository el 7 - Source
+baseurl=http://yum.puppetlabs.com/el/7/dependencies/SRPMS
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs-PC1
+       file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppet-PC1
+enabled=0
+gpgcheck=1
+priority=101

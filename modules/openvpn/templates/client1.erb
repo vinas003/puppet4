@@ -1,0 +1,8 @@
+push "route 10.10.0.0 255.255.255.0"
+push "route 10.8.0.0 255.255.255.0"
+
+# Push a route to the server
+push "route 192.168.1.38 255.255.255.252"
+
+# What ip client should have server ip
+ifconfig-push 10.9.0.3 10.9.0.1
