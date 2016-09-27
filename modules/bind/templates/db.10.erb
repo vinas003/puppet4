@@ -1,7 +1,7 @@
 $TTL    1800
 @       IN      SOA     dns.vinasec.se. admin.vinasec.se. (
 
-	19	; Serial
+	20	; Serial
 	1800	; Refresh
 	1800	; Retry
 	3600	; Expire
@@ -16,7 +16,7 @@ $TTL    1800
 @      IN      MX 20	mail2.vinasec.se.
 
 ; A Records
-vpn		IN	A	10.8.0.4
+vpn		IN	A	10.10.0.104
 
 vpn2		IN	A	10.8.0.102
 web2		IN	A	10.8.0.104
@@ -44,7 +44,7 @@ grafana		IN	A	10.10.0.23
 transmission	IN	A	10.10.0.25
 
 ; PTR Records
-4.0.8	 IN	PTR	vpn.vinasec.se.		; 10.8.0.4
+104.0.10	 IN	PTR	vpn.vinasec.se.		; 10.10.0.104
 
 102.0.8	 IN	PTR	vpn2.vinasec.se.	; 10.8.0.102
 104.0.8	 IN	PTR	web2.vinasec.se.     	; 10.8.0.104

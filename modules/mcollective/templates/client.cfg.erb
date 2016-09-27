@@ -7,9 +7,12 @@ plugin.activemq.pool.1.port = 61616
 plugin.activemq.pool.1.user = mcollective
 plugin.activemq.pool.1.password = <%= scope.lookupvar('mcollective::mcollective_password') %>
 plugin.activemq.pool.1.ssl = 1
-plugin.activemq.pool.1.ssl.ca = /var/lib/puppet/ssl/certs/ca.pem
+#plugin.activemq.pool.1.ssl.ca = /var/lib/puppet/ssl/certs/ca.pem
 plugin.activemq.pool.1.ssl.cert = /etc/mcollective.d/credentials/certs/vina.mco.pem
 plugin.activemq.pool.1.ssl.key = /etc/mcollective.d/credentials/private_keys/vina.mco_key.pem
+plugin.activemq.pool.1.ssl.ca = /etc/puppetlabs/puppet/ssl/certs/ca.pem
+#plugin.activemq.pool.1.ssl.cert = /etc/puppetlabs/puppet/ssl/certs/<%= scope.lookupvar('::clientcert') %>.pem
+#plugin.activemq.pool.1.ssl.key = /etc/puppetlabs/puppet/ssl/private_keys/<%= scope.lookupvar('::clientcert') %>.pem
 plugin.activemq.pool.1.ssl.fallback = 0
 
 # SSL security plugin settings:

@@ -44,7 +44,7 @@ class mcollective {
        '/etc/mcollective.d/credentials/certs/mcollective-servers.pem',
        '/etc/mcollective.d/credentials/private_keys/vina.mco_key.pem',
        '/etc/mcollective.d/credentials/certs/vina.mco.pem',
-       '/etc/mcollective/client.cfg',
+       '/etc/puppetlabs/mcollective/client.cfg',
       ]:
     }    
     }
@@ -75,8 +75,8 @@ class mcollective {
     owner    => "root",
     group    => "root",
     mode     => "400",
-    loglevel => debug, # reduce noise in Puppet reports
-    content  => inline_template("<%= scope.to_hash.reject { |k,v| k.to_s =~ /(uptime_seconds|timestamp|free)/ }.to_yaml %>"), # exclude rapidly changing facts
+    # loglevel => debug, # Not needed any more
+    content => inline_template('<%= scope.to_hash.reject { |k,v| !( k.is_a?(String) && v.is_a?(String) && k !~ /(uptime|free|timestamp)/ ) }.to_yaml %>'),
   }
 }
 

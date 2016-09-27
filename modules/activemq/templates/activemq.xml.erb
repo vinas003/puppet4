@@ -116,7 +116,7 @@
             <!-- <transportConnector name="openwire" uri="tcp://0.0.0.0:61616?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/> -->
             <!-- <transportConnector name="amqp" uri="amqp://0.0.0.0:5672?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>-->
             <transportConnector name="stomp" uri="stomp://0.0.0.0:61613?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
-	    <transportConnector name="stomp+nio+ssl" uri="stomp+nio+ssl://0.0.0.0:61616?needClientAuth=true&amp;transport.enabledProtocols=TLSv1,TLSv1.1,TLSv1.2"/>
+	    <transportConnector name="stomp+nio+ssl" uri="stomp+ssl://0.0.0.0:61616?needClientAuth=true&amp;transport.enabledProtocols=TLSv1,TLSv1.1,TLSv1.2"/>
 
 
 <!--
