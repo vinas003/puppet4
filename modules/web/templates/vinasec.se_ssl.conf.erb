@@ -4,7 +4,7 @@
     SSLCertificateKeyFile /etc/pki/tls/private/vinasec.se-key.pem
     SSLCertificateChainFile /etc/pki/tls/certs/vinasec.se-chain.pem
 
-    DocumentRoot "<%= @website_dir %>"
+    DocumentRoot "<%= scope.lookupvar('web::website_dir') %>"
     ServerName vinasec.se
     ServerAlias www.vinasec.se
 
@@ -18,7 +18,7 @@
     Options +Includes
     AddOutputFilter INCLUDES .shtml
 
-   <Directory "<%= @website_dir %>">
+   <Directory "<%= scope.lookupvar('web::website_dir') %>">
      Require all granted
    </Directory>
 
