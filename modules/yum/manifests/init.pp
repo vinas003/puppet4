@@ -22,6 +22,7 @@ class yum {
                'bind-utils',
                'tcpdump',
                'nano',
+               'sysstat',
                'setools-console',
                'bash-completion-extras',
 	       'yum-plugin-priorities',
