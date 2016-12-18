@@ -1,7 +1,7 @@
 $TTL    1800
 @       IN      SOA     dns.vinasec.se. admin.vinasec.se. (
 
-	21	; Serial
+	22	; Serial
 	1800	; Refresh
 	1800	; Retry
 	3600	; Expire
@@ -30,6 +30,7 @@ $TTL    1800
 @      IN      A	10.8.0.7
 @      IN      A	10.8.0.6
 @      IN      A	10.8.0.12
+@      IN      A	10.8.0.13
 
 
 @      IN      A	10.8.0.108
@@ -64,6 +65,7 @@ dns		IN      A      10.8.0.7
 puppet		IN      A      10.8.0.6
 activemq-cert	IN      CNAME  puppet
 docker-hosts	IN      A      10.8.0.12
+postgres	IN      A      10.8.0.13
 
 
 dns2		IN      A      10.10.0.15
