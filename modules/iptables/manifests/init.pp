@@ -51,7 +51,7 @@ class iptables {
   } elsif ($hostname =~ /^web/) {
     $rules = [
               '# Allow incoming web connections',
-              '-A INPUT -p tcp -m multiport --dports 80,443,8000 -j ACCEPT',
+              '-A INPUT -p tcp -m multiport --dports 80,443,8000,8443 -j ACCEPT',
              ]
   } elsif ($hostname =~ /^dns/) {
     $rules = [
