@@ -67,6 +67,13 @@ class iptables {
               '# Allow vpn clients to access foreman',
               '-A INPUT -p tcp -s 10.9.0.0/24 --dport 443 -j ACCEPT',
               ]
+  } elsif ($hostname =~ /^postgres/) {
+    $rules = [
+              '# Allow incoming web connections',
+              '-A INPUT -p tcp -s 10.8.0.0/24 --dport 5432 -j ACCEPT',
+              '-A INPUT -p tcp -s 10.9.0.0/24 --dport 5432 -j ACCEPT',
+              '-A INPUT -p tcp -s 10.10.0.0/24 --dport 5432 -j ACCEPT',
+              ]
   } elsif ($hostname =~ /^nfs/) {
     $rules = [
               '# Allow incoming nfs connections',
