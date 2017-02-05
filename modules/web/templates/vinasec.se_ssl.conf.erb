@@ -5,8 +5,8 @@
     SSLCertificateChainFile /etc/pki/tls/certs/vinasec.se-chain.pem
 
     DocumentRoot "<%= scope.lookupvar('web::website_dir') %>"
-    ServerName vinasec.se
-    ServerAlias www.vinasec.se
+    ServerName www.greyhash.se
+    ServerAlias greyhash.se www.greyline.se greyline.se www.vinasec.se vinasec.se
 
     Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
 
