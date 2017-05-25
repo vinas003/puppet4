@@ -1,8 +1,8 @@
 <VirtualHost *:443>
     SSLEngine on
-    SSLCertificateFile /etc/pki/tls/certs/vinasec.se.pem
-    SSLCertificateKeyFile /etc/pki/tls/private/vinasec.se-key.pem
-    SSLCertificateChainFile /etc/pki/tls/certs/vinasec.se-chain.pem
+    SSLCertificateFile /etc/letsencrypt/live/greyhash.se/cert.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/greyhash.se/privkey.pem
+    SSLCertificateChainFile /etc/letsencrypt/live/greyhash.se/fullchain.pem
 
     DocumentRoot "<%= scope.lookupvar('web::website_dir') %>"
     ServerName www.greyhash.se
