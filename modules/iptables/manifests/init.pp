@@ -15,13 +15,7 @@ class iptables {
 
   $nat_rule = '-A POSTROUTING -s 10.9.0.0/24 -o eth0 -j MASQUERADE'
 
-  if ($hostname == 'ssh') {
-    $rules = [
-              '# Drop ssh bruteforces for 12 hours in hope they will go away',
-              '-A INPUT -p tcp --dport 22 -m state --state NEW -m recent --set --name SSHBRUTE -j ACCEPT',
-              '-A INPUT -p tcp --dport 22 -m recent --update --seconds 18000 --hitcount 20 --rttl --name SSHBRUTE -j DROP',
-             ]
-  } elsif ($hostname =~ /^ssh/) { # This will match ssh2, ssh3 etc but not ssh since its matched above
+  if ($hostname =~ /^ssh/) {
     $rules = [
               '# Drop ssh bruteforces for 12 hours in hope they will go away',
               '-A INPUT -p tcp --dport 9538 -m state --state NEW -m recent --set --name SSHBRUTE -j ACCEPT',

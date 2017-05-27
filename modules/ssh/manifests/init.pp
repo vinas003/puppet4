@@ -14,7 +14,7 @@ class ssh {
   }
 
   # Run the ssh fallback server on different port since we use a router
-  if ($hostname != ssh2) {
+  if ($hostname != ssh) {
     $ssh_port = 22
   } else {
     $ssh_port = 9538
