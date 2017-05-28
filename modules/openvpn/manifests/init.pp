@@ -45,6 +45,11 @@ class openvpn {
     mode => "644",
   }
 
+  # These are not a sensitive files so 644 on them
+  easy_file { ['/etc/openvpn/ccd/Tony1']:
+    mode => "644",
+  }
+
   # Run the openvpn fallback server on different port since we use a router
   if ($hostname != vpn2) {
     $openvpn_port = 1194
