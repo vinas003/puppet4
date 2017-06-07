@@ -15,7 +15,7 @@ class mcollective {
  #   require => Package['mcollective'],
   }
 
-  $mcollective_host      = "activemq-cert.vinasec.se"
+  $mcollective_host      = "activemq-cert.greyhash.se"
   $mcollective_password  = "PASSWORD_HERE"
   
   # The managment nodes

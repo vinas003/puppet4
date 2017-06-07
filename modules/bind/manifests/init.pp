@@ -27,7 +27,7 @@ class bind {
      '/etc/named.conf',
      '/etc/named/named.conf.local',
      '/etc/named/zones/db.10',
-     '/etc/named/zones/db.vinasec.se',
+     '/etc/named/zones/db.greyhash.se',
     ]:
     mode => "644",
     group => "named",

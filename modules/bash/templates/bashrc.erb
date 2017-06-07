@@ -1,5 +1,23 @@
 # .bashrc
 
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+
+# .bashrc
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
    . /etc/bashrc
@@ -9,8 +27,8 @@ fi
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias ls='ls -ahl --color=auto'
-alias ll='ls -ahl --color=auto'
+alias ls='ls -ahlF --color=auto'
+alias ll='ls -ahlF --color=auto'
 alias df='df -h'
 alias emacs='emacs -nw'
 alias du='du -h'
@@ -18,8 +36,8 @@ alias grep='grep --color=auto'
 
 export EDITOR='/usr/bin/emacs -nw'
 
-HISTSIZE=100000000
-HISTFILESIZE=1000000000
+HISTSIZE=1000000000
+HISTFILESIZE=10000000000
 HISTCONTROL=ignoredups
 
 bind 'set completion-ignore-case on'
