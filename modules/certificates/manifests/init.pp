@@ -5,6 +5,7 @@ class certificates {
   easy_file {
     [
      '/etc/pki/tls/certs/vinasec.se-chain.pem',
+     '/etc/pki/tls/certs/vinasec.se-fullchain.pem',
      '/etc/pki/tls/certs/vinasec.se.pem',
     ]:
   }

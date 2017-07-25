@@ -90,6 +90,7 @@ class web {
      '/etc/httpd/conf.d/pagespeed.conf',
      '/etc/httpd/conf.d/vinasec.se.conf',
      '/etc/httpd/conf.d/vinasec.se_ssl.conf',
+     '/etc/httpd/conf.d/www.vinasec.se_ssl.conf',
      '/etc/httpd/modsecurity.d/activated_rules/rules-01.conf',
      '/etc/httpd/modsecurity.d/modsecurity_crs_10_config.conf',
      '/etc/cron.d/vina-website-daily', # cron file which daily does git pull on the website

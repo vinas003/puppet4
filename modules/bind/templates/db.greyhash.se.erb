@@ -1,0 +1,37 @@
+$TTL    1800
+@       IN      SOA     dns.greyhash.se. admin.greyhash.se. (
+
+	29	; Serial
+	1800	; Refresh
+	1800	; Retry
+	3600	; Expire
+	1800 )	; Negative Cache TTL
+
+; Name servers - NS records
+@      IN      NS      dns.greyhash.se.
+;@      IN      NS      dns2.greyhash.se.
+
+; Mail server - MX Records
+;@      IN      MX 10	mail.greyhash.se.
+;@      IN      MX 20	mail2.greyhash.se.
+
+; A Records
+@      IN      A	10.10.0.104
+@      IN      A	10.10.0.105
+
+@      IN      A	10.8.0.6
+@      IN      A	10.8.0.7
+@      IN      A	10.8.0.12
+@      IN      A	10.8.0.13
+
+; A Records
+vpn		IN      A      10.10.0.104
+web		IN      A      10.10.0.105
+ssh		IN	A      10.10.0.107
+
+puppet		IN      A      10.8.0.6
+dns		IN      A      10.8.0.7
+activemq-cert	IN      CNAME  puppet
+www		IN      CNAME  web
+docker-hosts	IN      A      10.8.0.12
+postgres	IN      A      10.8.0.13

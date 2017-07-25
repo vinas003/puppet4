@@ -1,36 +1,39 @@
 $TTL    1800
-@       IN      SOA     dns.vinasec.se. admin.vinasec.se. (
+@       IN      SOA     dns.greyhash.se. admin.greyhash.se. (
 
-	25	; Serial
+	29	; Serial
 	1800	; Refresh
 	1800	; Retry
 	3600	; Expire
 	1800 )	; Negative Cache TTL
 
 ; name servers - NS records
-@      IN      NS	dns.vinasec.se.
-;@      IN      NS	dns2.vinasec.se.
+@      IN      NS	dns.greyhash.se.
+;@      IN      NS	dns2.greyhash.se.
 
 ; Mail server - MX Records
-;@      IN      MX 10	mail.vinasec.se.
-;@      IN      MX 20	mail2.vinasec.se.
+;@      IN      MX 10	mail.greyhash.se.
+;@      IN      MX 20	mail2.greyhash.se.
 
 ; A and CNAME Records
 vpn		IN	A	10.10.0.104
 web		IN	A	10.10.0.105
+ssh		IN	A	10.10.0.107
 
 puppet		IN	A	10.8.0.6
 dns		IN	A	10.8.0.7
 activemq-cert	IN	CNAME	puppet
+www		IN	CNAME	web
 docker-host	IN	A	10.8.0.12
 postgres	IN	A	10.8.0.13
 
 ; PTR Records
-104.0.10	 IN	PTR	vpn.vinasec.se.		; 10.10.0.104
-105.0.10	 IN	PTR	web.vinasec.se.      	; 10.10.0.105
+104.0.10	 IN	PTR	vpn.greyhash.se.	; 10.10.0.104
+105.0.10	 IN	PTR	web.greyhash.se.      	; 10.10.0.105
+107.0.10	 IN	PTR	ssh.greyhash.se.      	; 10.10.0.107
 
-6.0.8  	 IN	PTR	dns.vinasec.se.      	; 10.8.0.6
-7.0.8	 IN	PTR	puppet.vinasec.se.   	; 10.8.0.7
-12.0.8	 IN	PTR	docker-host.vinasec.se. ; 10.8.0.12
-13.0.8	 IN	PTR	postgres.vinasec.se. 	; 10.8.0.13
+6.0.8	 IN	PTR	puppet.greyhash.se.   	; 10.8.0.6
+7.0.8  	 IN	PTR	dns.greyhash.se.      	; 10.8.0.7
+12.0.8	 IN	PTR	docker-host.greyhash.se. ; 10.8.0.12
+13.0.8	 IN	PTR	postgres.greyhash.se. 	; 10.8.0.13
 

@@ -248,6 +248,9 @@ keepalive 10 120
 # vina
 tls-auth ta.key 0 # This file is secret
 
+push "dhcp-option DOMAIN greyhash.se"
+push "dhcp-option DNS 10.8.0.7"
+
 # Select a cryptographic cipher.
 # This config item must be copied to
 # the client config file as well.
