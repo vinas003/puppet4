@@ -92,6 +92,9 @@ ModPagespeedXHeaderValue "Powered By mod_pagespeed"
     # ModPagespeedEnableFilters collapse_whitespace,elide_attributes
 
     # Vina
+    ModPagespeedPreserveUrlRelativity on
+
+    # Vina
     ModPagespeedEnableFilters collapse_whitespace,remove_comments,extend_cache,inline_css,inline_javascript
 
     # Explicitly forbids the enabling of specific filters using either query
@@ -318,7 +321,7 @@ ModPagespeedXHeaderValue "Powered By mod_pagespeed"
     # ModPagespeedLoadFromFile "http://example.com/static/" "/var/www/static/"
 
     # vina
-    ModPagespeedLoadFromFile "https://vinasec.se/" "/www/"
+    ModPagespeedLoadFromFile "https://www.greyhash.se/new/" "/www/new/"
     ModPagespeedLoadFromFileRule Disallow "/www/cgi-bin/"
 
 
